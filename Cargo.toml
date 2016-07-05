@@ -1,0 +1,6 @@
+[package]
+name = "Magnatar"
+version = "0.1.0"
+authors = ["VukoDrakkeinen <sneyk8+git@gmail.com>"]
+
+[dependencies]
