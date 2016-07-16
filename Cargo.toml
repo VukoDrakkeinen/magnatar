@@ -1,6 +1,16 @@
 [package]
-name = "Magnatar"
+name = "magnatar"
 version = "0.1.0"
 authors = ["VukoDrakkeinen <sneyk8+git@gmail.com>"]
+build = "src/build.rs"
+
+[build-dependencies]
+serde_codegen = "^0.7"
 
 [dependencies]
+libc = "^0.2"
+serde = "^0.7"
+serde_json = "^0.7"
+bip_bencode = "^0.1"
+aho-corasick = "^0.5"
+#owning_ref = "^0.1"

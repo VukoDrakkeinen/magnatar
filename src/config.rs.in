@@ -1,0 +1,26 @@
+#[derive(Deserialize)]
+pub struct Config {
+	pub watch_path: PathBuf,
+	rules: Vec<Rule>,
+	#[serde(skip_deserializing)]
+	matcher: Matchers,	//todo: investigate possibility of using Vec<enum{trackerMatcher, otherMatcher}> instead
+}
+
+#[derive(Deserialize)]
+pub struct Rule {
+	#[serde(rename="match")]
+	pattern: Pattern,
+	destination: PathBuf,
+}
+
+#[derive(Deserialize)]
+pub struct Pattern {
+	tracker: Option<String>,
+	//except: Option<Pattern>,
+}
+
+#[derive(Default)]
+pub struct Matchers {
+	of_trackers: Option<AcAutomaton<String>>,
+	//todo: others matchers
+}

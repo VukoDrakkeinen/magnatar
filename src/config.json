@@ -1,0 +1,21 @@
+{
+	"watch_path": "~/watchdir/",
+	"rules": [
+		{
+			"match": {
+				"tracker": "tracker0.com"
+			},
+			"destination": "~/watchdir/Tracker0"
+		},
+		{
+			"match": {
+				"tracker": "tracker1.uk.co"
+			},
+			"destination": "~/watchdir/Tracker1"
+		},
+		{
+			"match": {},
+			"destination": "~/watchdir/Misc"
+		}
+	]
+}
